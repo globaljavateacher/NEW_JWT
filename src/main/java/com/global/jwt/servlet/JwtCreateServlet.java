@@ -18,8 +18,8 @@ public class JwtCreateServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
     	try {
 			JwtService.init(req);
-			String access  = JwtService.createAccessToken("hong");
-			String refresh = JwtService.createRefreshToken("hong");
+			String access  = JwtService.createAccessToken("root");
+			String refresh = JwtService.createRefreshToken("root");
 			ObjectMapper mapper = new ObjectMapper();
             ObjectNode rootNode = mapper.createObjectNode();
             rootNode.put("access", access);
